@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#07111d">
+  <title>Admin Login | Smart College Bus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+  <main class="login-layout">
+    <a class="brand login-brand" href="index.html"><span class="brand-mark">SC</span><span>SMART COLLEGE BUS</span></a>
+    <section class="login-panel" aria-labelledby="login-title">
+      <p class="eyebrow"><span class="status-dot"></span> ADMINISTRATOR ACCESS</p>
+      <h1 id="login-title">Welcome back.</h1><p class="login-intro" data-auth-intro>Sign in to manage campus transit.</p>
+      <div class="config-notice" data-config-notice hidden>Firebase is not configured. Add your Firebase web app settings in <code>js/firebase-config.js</code> to enable administrator access.</div>
+      <form id="login-form" novalidate>
+        <label class="field-label" for="email">Email address</label><input id="email" name="email" type="email" autocomplete="username" placeholder="admin@college.edu" required>
+        <label class="field-label" for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+        <div class="confirm-password-field" data-confirm-field hidden><label class="field-label" for="confirm-password">Confirm password</label><input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Re-enter your password" minlength="6"></div>
+        <p class="form-message" id="login-message" role="alert" aria-live="polite"></p>
+        <button class="button button-primary login-submit" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="auth-switch"><span data-auth-switch-text>New to the system?</span> <button type="button" data-auth-toggle>Create an account</button></p>
+      <p class="signup-note" data-signup-note hidden>New accounts can access the admin workspace. Restrict account creation before using this prototype with real student data.</p>
+      <a class="back-link" href="index.html">← Back to home</a>
+    </section>
+    <p class="login-footnote">SMART COLLEGE BUS <span>/</span> SECURE ADMIN PORTAL</p>
+  </main>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
